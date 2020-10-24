@@ -7,7 +7,6 @@ export class LambdaPythonStack extends cdk.Stack {
     new lambda.Function(this, 'PythonFunction', {
       functionName: 'python-function',
       runtime: lambda.Runtime.PYTHON_3_8,
-      
       code: lambda.Code.fromAsset('lambda', {
         bundling: {
           image: lambda.Runtime.PYTHON_3_8.bundlingDockerImage,
