@@ -26,6 +26,7 @@ npm i <モジュール名>
 - @aws-cdk/aws-lambda-event-sources
 - @aws-cdk/aws-lambda-nodejs
 - @aws-cdk/aws-lambda-python
+- @aws-cdk/aws-logs
 - @aws-cdk/aws-s3
 - @aws-cdk/aws-stepfunctions
 - @aws-cdk/aws-stepfunctions-tasks
