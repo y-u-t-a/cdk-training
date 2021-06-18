@@ -8,7 +8,7 @@ export class DynamodbStack extends cdk.Stack {
   }
 }
 
-const dynamoDb = (scope: cdk.Construct):cdk.Construct => {
+const dynamoDb = (scope: cdk.Construct) => {
   return new Table(scope, 'Table', {
     partitionKey: {
       name: "id",
