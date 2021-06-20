@@ -19,6 +19,7 @@ npm i <モジュール名>
 
 - @aws-cdk/aws-apigateway
 - @aws-cdk/aws-apigatewayv2
+- @aws-cdk/aws-apigatewayv2-integrations
 - @aws-cdk/aws-events
 - @aws-cdk/aws-events-targets
 - @aws-cdk/aws-iam
