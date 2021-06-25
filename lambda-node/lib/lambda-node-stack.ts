@@ -29,7 +29,7 @@ const createLambda = (scope: cdk.Construct, functionName: string) => {
           cp -r . /asset-output
           `,
         ],
-        user: 'root'
+        user: 'root' // user を root にしないと /.npm ディレクトリ作成でエラーになる
       }
     }),
     handler: 'index.handler',
