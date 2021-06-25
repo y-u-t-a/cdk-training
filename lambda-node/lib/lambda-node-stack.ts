@@ -18,7 +18,20 @@ const createLambda = (scope: cdk.Construct, functionName: string) => {
   })
   return new lambda.Function(scope, functionName, {
     runtime: lambda.Runtime.NODEJS_14_X,
-    code: lambda.Code.fromAsset(`src/${functionName}`),
+    code: lambda.Code.fromAsset(`src/${functionName}`, {
+      bundling: {
+        image: lambda.Runtime.NODEJS_14_X.bundlingImage,
+        command: [
+          'bash', '-c', `
+          if [ -e package-lock.json ]; then
+            npm ci
+          fi
+          cp -r . /asset-output
+          `,
+        ],
+        user: 'root'
+      }
+    }),
     handler: 'index.handler',
     functionName: functionName,
   })
