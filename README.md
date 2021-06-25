@@ -4,7 +4,7 @@ AWS CDK の勉強
 ## CDK プロジェクトを作成する流れ
 
 ```bash
-npx cdk init app --language=typescript
+npx aws-cdk init app --language=typescript
 ```
 
 使用するモジュールのインストール
