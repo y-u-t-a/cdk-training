@@ -6,6 +6,7 @@ export class LambdaNodeStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props)
     createLambda(this, 'node-function-a')
+    createLambda(this, 'node-function-sdk')
   }
 }
 
