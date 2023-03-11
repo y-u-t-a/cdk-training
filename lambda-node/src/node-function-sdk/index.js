@@ -1,6 +1,6 @@
-const { STSClient, GetCallerIdentityCommand } = require("@aws-sdk/client-sts")
+import { STSClient, GetCallerIdentityCommand } from "@aws-sdk/client-sts"
 
-const handler = async (event, context) => {
+export async function handler(event, context) {
   const client = new STSClient()
   const command = new GetCallerIdentityCommand()
   const response = await client.send(command)
@@ -12,5 +12,3 @@ const handler = async (event, context) => {
     }
   }
 }
-
-exports.handler = handler

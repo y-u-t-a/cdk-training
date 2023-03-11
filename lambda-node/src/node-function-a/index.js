@@ -1,7 +1,5 @@
-const handler = async (event, context) => {
+export async function handler(event, context) {
   return {
     status: 200
   }
 }
-
-exports.handler = handler
