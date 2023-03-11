@@ -11,7 +11,11 @@ export class LambdaNodeStack extends cdk.Stack {
   }
 }
 
-const createLambda = (scope: cdk.Construct, functionName: string, bundleModules: string[]) => {
+function createLambda(
+  scope: cdk.Construct,
+  functionName: string,
+  bundleModules: string[]
+) {
   new logs.LogGroup(scope, `${functionName}-logs`, {
     logGroupName: `/aws/lambda/${functionName}`,
     retention: logs.RetentionDays.ONE_WEEK,
