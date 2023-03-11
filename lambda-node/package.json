@@ -5,9 +5,6 @@
     "lambda-node": "bin/lambda-node.js"
   },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest",
     "cdk": "cdk"
   },
   "devDependencies": {
