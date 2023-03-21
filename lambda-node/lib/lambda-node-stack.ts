@@ -1,10 +1,15 @@
-import * as cdk from '@aws-cdk/core'
-import * as logs from '@aws-cdk/aws-logs'
-import * as lambdaNodeJs from '@aws-cdk/aws-lambda-nodejs'
-import { Runtime } from "@aws-cdk/aws-lambda"
+import { Construct } from "constructs"
+import {
+  Stack,
+  StackProps,
+  aws_lambda_nodejs,
+  aws_logs,
+  RemovalPolicy
+} from "aws-cdk-lib"
+import { Runtime } from "aws-cdk-lib/aws-lambda"
 
-export class LambdaNodeStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+export class LambdaNodeStack extends Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props)
     createLambda(this, 'node-function-a', [])
     createLambda(this, 'node-function-sdk', ["@aws-sdk/client-sts"])
@@ -12,21 +17,20 @@ export class LambdaNodeStack extends cdk.Stack {
 }
 
 function createLambda(
-  scope: cdk.Construct,
+  scope: Construct,
   functionName: string,
   bundleModules: string[]
 ) {
-  new logs.LogGroup(scope, `${functionName}-logs`, {
+  new aws_logs.LogGroup(scope, `${functionName}-logs`, {
     logGroupName: `/aws/lambda/${functionName}`,
-    retention: logs.RetentionDays.ONE_WEEK,
-    removalPolicy: cdk.RemovalPolicy.DESTROY,
+    retention: aws_logs.RetentionDays.ONE_WEEK,
+    removalPolicy: RemovalPolicy.DESTROY,
   })
-  return new lambdaNodeJs.NodejsFunction(scope, functionName, {
-    runtime: Runtime.NODEJS_16_X,
+  new aws_lambda_nodejs.NodejsFunction(scope, functionName, {
+    runtime: Runtime.NODEJS_18_X,
     entry: `src/${functionName}/index.js`,
     handler: 'handler',
     functionName: functionName,
-    depsLockFilePath: 'package-lock.json',
     bundling: {
       nodeModules: bundleModules
     }
