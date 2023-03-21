@@ -1,19 +1,20 @@
-import * as cdk from '@aws-cdk/core'
-import { AttributeType, Table } from '@aws-cdk/aws-dynamodb'
+import { Construct } from "constructs"
+import { RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib'
+import { AttributeType, Table } from 'aws-cdk-lib/aws-dynamodb'
 
-export class DynamodbStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+export class DynamodbStack extends Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props)
-    const table = dynamoDb(this)
+    dynamoDb(this)
   }
 }
 
-const dynamoDb = (scope: cdk.Construct) => {
+const dynamoDb = (scope: Construct) => {
   return new Table(scope, 'Table', {
     partitionKey: {
       name: "id",
       type: AttributeType.STRING
     },
-    removalPolicy: cdk.RemovalPolicy.DESTROY // スタック削除時に削除する
+    removalPolicy: RemovalPolicy.DESTROY // スタック削除時に削除する
   })
 }

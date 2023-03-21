@@ -5,20 +5,6 @@
     "dynamodb": "bin/dynamodb.js"
   },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest",
     "cdk": "cdk"
-  },
-  "devDependencies": {
-    "@types/node": "10.17.27",
-    "aws-cdk": "1.109.0",
-    "ts-node": "^9.0.0",
-    "typescript": "~3.9.7"
-  },
-  "dependencies": {
-    "@aws-cdk/aws-dynamodb": "1.109.0",
-    "@aws-cdk/core": "1.109.0",
-    "source-map-support": "^0.5.16"
   }
 }
