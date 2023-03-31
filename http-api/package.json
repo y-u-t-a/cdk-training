@@ -1,9 +1,6 @@
 {
   "name": "http-api",
   "version": "0.1.0",
-  "bin": {
-    "http-api": "bin/http-api.js"
-  },
   "scripts": {
     "cdk": "cdk"
   }

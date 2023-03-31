@@ -1,9 +1,6 @@
 {
   "name": "lambda-ts",
   "version": "0.1.0",
-  "bin": {
-    "lambda-ts": "bin/lambda-ts.js"
-  },
   "scripts": {
     "cdk": "cdk"
   },

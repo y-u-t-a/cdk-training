@@ -1,9 +1,6 @@
 {
   "name": "lambda-python-module",
   "version": "0.1.0",
-  "bin": {
-    "lambda-python-module": "bin/lambda-python-module.js"
-  },
   "scripts": {
     "cdk": "cdk"
   }

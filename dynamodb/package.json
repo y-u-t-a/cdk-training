@@ -1,9 +1,6 @@
 {
   "name": "dynamodb",
   "version": "0.1.0",
-  "bin": {
-    "dynamodb": "bin/dynamodb.js"
-  },
   "scripts": {
     "cdk": "cdk"
   }
