@@ -5,7 +5,8 @@
     "dynamodb",
     "lambda-node",
     "lambda-python",
-    "lambda-python-module"
+    "lambda-python-module",
+    "lambda-ts"
   ],
   "devDependencies": {
     "@aws-cdk/assert": "^2.0.0",
