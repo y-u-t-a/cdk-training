@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "workspaces": [
     "dynamodb",
+    "http-api",
     "lambda-node",
     "lambda-python",
     "lambda-python-module",
@@ -10,6 +11,8 @@
   ],
   "devDependencies": {
     "@aws-cdk/assert": "^2.0.0",
+    "@aws-cdk/aws-apigatewayv2-alpha": "^2.72.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.72.0-alpha.0",
     "@aws-cdk/aws-lambda-python-alpha": "^2.72.0-alpha.0",
     "@aws-sdk/client-sts": "^3.41.0",
     "@types/node": "10.17.27",

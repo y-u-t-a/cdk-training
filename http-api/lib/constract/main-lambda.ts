@@ -1,18 +1,18 @@
-import * as cdk from '@aws-cdk/core'
-import * as lambda from '@aws-cdk/aws-lambda'
+import { Construct } from 'constructs'
+import * as lambda from 'aws-cdk-lib/aws-lambda'
 
-export class MainLambda extends cdk.Construct {
+export class MainLambda extends Construct {
 
   readonly function:lambda.Function
 
-  constructor(scope: cdk.Construct, id: string) {
+  constructor(scope: Construct, id: string) {
     super(scope, id)
     this.function = new lambda.Function(this, 'MainLambdaFunction', {
       functionName: 'MainFunction',
       runtime: lambda.Runtime.PYTHON_3_8,
       code: lambda.Code.fromAsset('lambda/main-lambda-function', {
         bundling: {
-          image: lambda.Runtime.PYTHON_3_8.bundlingDockerImage,
+          image: lambda.Runtime.PYTHON_3_8.bundlingImage,
           command: [
             'bash', '-c', `
             if [ -e requirements.txt ]; then
