@@ -3,5 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "cdk": "cdk"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sts": "^3.303.0"
   }
 }
