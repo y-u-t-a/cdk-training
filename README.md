@@ -11,31 +11,36 @@ npm run cdk <cdk subcommand> -w <workspace>
 
 ## CDK プロジェクトを作成する流れ
 
+CDK v2 からの手順。
+
 ```bash
-npx aws-cdk init app --language=typescript
+npx cdk init app --language typescript
 ```
 
-使用するモジュールのインストール
+CDK v2 からは `aws-cdk-lib` にモジュールがまとめられるようになった。  
+https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib-readme.html
+
+一部の alpha 状態のリソースは個別にモジュールをインストールする必要がある。  
 
 ```bash
 npm i <モジュール名>
 ```
- 
-モジュール名は [リファレンス](https://docs.aws.amazon.com/cdk/api/latest/docs/aws-construct-library.html) をページ内検索して特定する。
+
+モジュール名は [リファレンス](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html) をページ内検索して特定する。
 
 よく使いそうなモジュール
 
-- @aws-cdk/aws-apigateway
-- @aws-cdk/aws-apigatewayv2
-- @aws-cdk/aws-apigatewayv2-integrations
-- @aws-cdk/aws-events
-- @aws-cdk/aws-events-targets
-- @aws-cdk/aws-iam
-- @aws-cdk/aws-lambda
-- @aws-cdk/aws-lambda-event-sources
-- @aws-cdk/aws-lambda-nodejs
-- @aws-cdk/aws-lambda-python
-- @aws-cdk/aws-logs
-- @aws-cdk/aws-s3
-- @aws-cdk/aws-stepfunctions
-- @aws-cdk/aws-stepfunctions-tasks
+- aws-cdk-lib/aws-apigateway
+- @aws-cdk/aws-apigatewayv2-alpha
+- @aws-cdk/aws-apigatewayv2-integrations-alpha
+- aws-cdk-lib/aws-events
+- aws-cdk-lib/aws-events-targets
+- aws-cdk-lib/aws-iam
+- aws-cdk-lib/aws-lambda
+- aws-cdk-lib/aws-lambda-event-sources
+- aws-cdk-lib/aws-lambda-nodejs
+- @aws-cdk/aws-lambda-python-alpha
+- aws-cdk-lib/aws-logs
+- aws-cdk-lib/aws-s3
+- aws-cdk-lib/aws-stepfunctions
+- aws-cdk-lib/aws-stepfunctions-tasks
