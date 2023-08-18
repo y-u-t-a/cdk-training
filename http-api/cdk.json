@@ -1,3 +1,3 @@
 {
-  "app": "npx tsx bin/http-api.ts"
+  "app": "npx tsx index.ts"
 }
