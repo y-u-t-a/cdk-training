@@ -1,6 +1,14 @@
 # cdk-training
 AWS CDK の勉強
 
+## コマンド
+
+プロジェクトルートでワークスペースを指定するオプション `-w` を付与して cdk コマンドを実行する
+
+```sh
+npm run cdk <cdk subcommand> -w <workspace>
+```
+
 ## CDK プロジェクトを作成する流れ
 
 ```bash
