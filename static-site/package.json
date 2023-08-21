@@ -1,0 +1,7 @@
+{
+  "name": "static-site",
+  "version": "0.1.0",
+  "scripts": {
+    "cdk": "cdk"
+  }
+}
