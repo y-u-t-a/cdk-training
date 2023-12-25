@@ -28,7 +28,7 @@ function createLambda(
   })
   new aws_lambda_nodejs.NodejsFunction(scope, functionName, {
     runtime: Runtime.NODEJS_18_X,
-    entry: `src/${functionName}/index.js`,
+    entry: `src/${functionName}/index.mjs`,
     handler: 'handler',
     functionName: functionName,
     bundling: {
