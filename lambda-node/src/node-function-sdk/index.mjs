@@ -1,7 +1,8 @@
 import { STSClient, GetCallerIdentityCommand } from "@aws-sdk/client-sts"
 
+const client = new STSClient()
+
 export async function handler(event, context) {
-  const client = new STSClient()
   const command = new GetCallerIdentityCommand()
   const response = await client.send(command)
   return {
