@@ -6,7 +6,7 @@ import {
   aws_logs,
   RemovalPolicy
 } from "aws-cdk-lib"
-import { Runtime } from "aws-cdk-lib/aws-lambda"
+import { Architecture, Runtime } from "aws-cdk-lib/aws-lambda"
 
 export class LambdaNodeStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -27,7 +27,8 @@ function createLambda(
     removalPolicy: RemovalPolicy.DESTROY,
   })
   new aws_lambda_nodejs.NodejsFunction(scope, functionName, {
-    runtime: Runtime.NODEJS_18_X,
+    runtime: Runtime.NODEJS_20_X,
+    architecture: Architecture.ARM_64,
     entry: `src/${functionName}/index.mjs`,
     handler: 'handler',
     functionName: functionName,
