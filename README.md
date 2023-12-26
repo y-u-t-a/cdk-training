@@ -31,8 +31,6 @@ npm i <モジュール名>
 よく使いそうなモジュール
 
 - aws-cdk-lib/aws-apigateway
-- @aws-cdk/aws-apigatewayv2-alpha
-- @aws-cdk/aws-apigatewayv2-integrations-alpha
 - aws-cdk-lib/aws-events
 - aws-cdk-lib/aws-events-targets
 - aws-cdk-lib/aws-iam

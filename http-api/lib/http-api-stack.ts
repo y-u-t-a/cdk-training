@@ -1,7 +1,7 @@
 import { Construct } from 'constructs'
 import * as cdk from 'aws-cdk-lib'
-import { HttpApi, HttpMethod } from '@aws-cdk/aws-apigatewayv2-alpha'
-import { HttpLambdaIntegration } from '@aws-cdk/aws-apigatewayv2-integrations-alpha'
+import { HttpApi, HttpMethod } from 'aws-cdk-lib/aws-apigatewayv2'
+import { HttpLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations'
 import { MainLambda } from './constract/main-lambda'
 import { AuthLambda } from './constract/auth-lambda'
 

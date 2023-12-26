@@ -12,8 +12,6 @@
   ],
   "devDependencies": {
     "@aws-cdk/assert": "^2.68.0",
-    "@aws-cdk/aws-apigatewayv2-alpha": "^2.114.1-alpha.0",
-    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.114.1-alpha.0",
     "@aws-cdk/aws-lambda-python-alpha": "^2.116.1-alpha.0",
     "@types/node": "10.17.27",
     "aws-cdk": "^2.116.1",
