@@ -42,3 +42,12 @@ npm i <モジュール名>
 - aws-cdk-lib/aws-s3
 - aws-cdk-lib/aws-stepfunctions
 - aws-cdk-lib/aws-stepfunctions-tasks
+
+## Tips
+
+各 Workspace にコマンドを実行。
+コマンド例。
+
+```sh
+npm run cdk ls --workspaces
+```
