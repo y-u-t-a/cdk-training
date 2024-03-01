@@ -1,5 +1,5 @@
-const serverlessExpress = require('@codegenie/serverless-express')
-const express = require('express')
+import serverlessExpress from '@codegenie/serverless-express'
+import express from 'express'
 
 const app = express()
 
@@ -8,4 +8,4 @@ app.get('/hello/:name?', (req, res) => {
   res.send(`Hello ${name}!`)
 })
 
-exports.handler = serverlessExpress({ app })
+export const handler = serverlessExpress({ app })
