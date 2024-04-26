@@ -12,7 +12,8 @@
     "static-site"
   ],
   "scripts": {
-    "format": "npx biome format --write ."
+    "format": "npx biome format --write .",
+    "lint": "npx biome lint --apply ."
   },
   "devDependencies": {
     "@aws-cdk/assert": "^2.68.0",
