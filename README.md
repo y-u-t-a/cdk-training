@@ -3,10 +3,17 @@ AWS CDK の勉強
 
 ## コマンド
 
-プロジェクトルートでワークスペースを指定するオプション `-w` を付与して cdk コマンドを実行する
+モノレポ構成のプロジェクトのルートディレクトリで CDK コマンドを実行する場合、
+`npm run`（npx ではなく）にワークスペースを指定するオプション `-w` を付与して cdk コマンドを実行する。
 
 ```sh
 npm run cdk <cdk subcommand> -w <workspace>
+```
+
+各プロジェクトに順次同じコマンドを実行したい場合は、`--workspaces` オプションを付与する。
+
+```sh
+npm run cdk <cdk subcommand> --workspaces
 ```
 
 ## CDK プロジェクトを作成する流れ
@@ -42,12 +49,3 @@ npm i <モジュール名>
 - aws-cdk-lib/aws-s3
 - aws-cdk-lib/aws-stepfunctions
 - aws-cdk-lib/aws-stepfunctions-tasks
-
-## Tips
-
-各 Workspace にコマンドを実行。
-コマンド例。
-
-```sh
-npm run cdk ls --workspaces
-```
