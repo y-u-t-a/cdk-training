@@ -21,7 +21,7 @@ export class LambdaRouterStack extends cdk.Stack {
       timeout: cdk.Duration.seconds(60),
       memorySize: 256,
       environment: {
-        "TZ": "Asia/Tokyo"
+        TZ: 'Asia/Tokyo',
       },
     })
     fn.addFunctionUrl({

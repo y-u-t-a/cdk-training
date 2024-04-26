@@ -14,7 +14,10 @@ export class HttpApiStack extends cdk.Stack {
     httpApi.addRoutes({
       path: '/',
       methods: [HttpMethod.GET],
-      integration: new HttpLambdaIntegration("lambdaIntegration", mainLambda.function)
+      integration: new HttpLambdaIntegration(
+        'lambdaIntegration',
+        mainLambda.function,
+      ),
     })
   }
 }

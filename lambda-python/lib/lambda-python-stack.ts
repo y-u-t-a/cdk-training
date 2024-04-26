@@ -12,16 +12,18 @@ export class LambdaPythonStack extends cdk.Stack {
         bundling: {
           image: lambda.Runtime.PYTHON_3_8.bundlingImage,
           command: [
-            'bash', '-c', `
+            'bash',
+            '-c',
+            `
             if [ -e requirements.txt ]; then
               pip install -r requirements.txt -t /asset-output
             fi
             cp -au . /asset-output
             `,
-          ]
-        }
+          ],
+        },
       }),
-      handler: 'main.handler'
+      handler: 'main.handler',
     })
   }
 }

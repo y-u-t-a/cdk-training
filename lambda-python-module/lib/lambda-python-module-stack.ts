@@ -12,12 +12,12 @@ export class LambdaPythonModuleStack extends Stack {
       entry: 'lambda',
       index: 'main.py',
       handler: 'handler',
-      runtime: Runtime.PYTHON_3_8
+      runtime: Runtime.PYTHON_3_8,
     })
     new LogGroup(this, 'PyFunctionLogs', {
-      logGroupName: "/aws/lambda/PyFunction",
+      logGroupName: '/aws/lambda/PyFunction',
       retention: RetentionDays.ONE_DAY,
-      removalPolicy: RemovalPolicy.DESTROY // スタック削除時に一緒に削除する
+      removalPolicy: RemovalPolicy.DESTROY, // スタック削除時に一緒に削除する
     })
   }
 }

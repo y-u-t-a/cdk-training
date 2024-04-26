@@ -1,25 +1,25 @@
-import { Construct } from "constructs"
+import { Construct } from 'constructs'
 import {
   Stack,
   StackProps,
   aws_lambda_nodejs,
   aws_logs,
-  RemovalPolicy
-} from "aws-cdk-lib"
-import { Architecture, Runtime } from "aws-cdk-lib/aws-lambda"
+  RemovalPolicy,
+} from 'aws-cdk-lib'
+import { Architecture, Runtime } from 'aws-cdk-lib/aws-lambda'
 
 export class LambdaNodeStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props)
     createLambda(this, 'node-function-a', [])
-    createLambda(this, 'node-function-sdk', ["@aws-sdk/client-sts"])
+    createLambda(this, 'node-function-sdk', ['@aws-sdk/client-sts'])
   }
 }
 
 function createLambda(
   scope: Construct,
   functionName: string,
-  bundleModules: string[]
+  bundleModules: string[],
 ) {
   new aws_logs.LogGroup(scope, `${functionName}-logs`, {
     logGroupName: `/aws/lambda/${functionName}`,
@@ -33,7 +33,7 @@ function createLambda(
     handler: 'handler',
     functionName: functionName,
     bundling: {
-      nodeModules: bundleModules
-    }
+      nodeModules: bundleModules,
+    },
   })
 }

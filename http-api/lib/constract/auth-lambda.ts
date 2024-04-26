@@ -2,8 +2,7 @@ import { Construct } from 'constructs'
 import * as lambda from 'aws-cdk-lib/aws-lambda'
 
 export class AuthLambda extends Construct {
-
-  readonly function:lambda.Function
+  readonly function: lambda.Function
 
   constructor(scope: Construct, id: string) {
     super(scope, id)
@@ -14,16 +13,18 @@ export class AuthLambda extends Construct {
         bundling: {
           image: lambda.Runtime.PYTHON_3_8.bundlingImage,
           command: [
-            'bash', '-c', `
+            'bash',
+            '-c',
+            `
             if [ -e requirements.txt ]; then
               pip install -r requirements.txt -t /asset-output
             fi
             cp -au . /asset-output
             `,
-          ]
-        }
+          ],
+        },
       }),
-      handler: 'main.handler'
+      handler: 'main.handler',
     })
   }
 }

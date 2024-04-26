@@ -1,4 +1,4 @@
-import { STSClient, GetCallerIdentityCommand } from "@aws-sdk/client-sts"
+import { STSClient, GetCallerIdentityCommand } from '@aws-sdk/client-sts'
 
 const client = new STSClient()
 
@@ -7,9 +7,9 @@ export async function handler(event, context) {
   const response = await client.send(command)
   return {
     result: {
-      Account :response.Account,
-      UserId :response.UserId,
-      Arn :response.Arn,
-    }
+      Account: response.Account,
+      UserId: response.UserId,
+      Arn: response.Arn,
+    },
   }
 }
