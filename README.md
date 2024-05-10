@@ -10,10 +10,11 @@ AWS CDK の勉強
 npm run cdk <cdk subcommand> -w <workspace>
 ```
 
-各プロジェクトに順次同じコマンドを実行したい場合は、`--workspaces` オプションを付与する。
+各プロジェクトに順次同じコマンドを実行したい場合は、`--workspaces` オプションを付与する。  
+`--if-present` は、ターゲットスクリプトが存在しない場合はスキップするオプション。
 
 ```sh
-npm run cdk <cdk subcommand> --workspaces
+npm run cdk <cdk subcommand> --workspaces --if-present
 ```
 
 ## CDK プロジェクトを作成する流れ
