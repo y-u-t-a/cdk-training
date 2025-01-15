@@ -12,7 +12,7 @@ export class LambdaPythonModuleStack extends Stack {
       entry: 'lambda',
       index: 'main.py',
       handler: 'handler',
-      runtime: Runtime.PYTHON_3_8,
+      runtime: Runtime.PYTHON_3_13,
     })
     new LogGroup(this, 'PyFunctionLogs', {
       logGroupName: '/aws/lambda/PyFunction',

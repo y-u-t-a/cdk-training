@@ -8,10 +8,10 @@ export class AuthLambda extends Construct {
     super(scope, id)
     this.function = new lambda.Function(this, 'AuthLambdaFunction', {
       functionName: 'AuthFunction',
-      runtime: lambda.Runtime.PYTHON_3_8,
+      runtime: lambda.Runtime.PYTHON_3_13,
       code: lambda.Code.fromAsset('lambda/auth-lambda-function', {
         bundling: {
-          image: lambda.Runtime.PYTHON_3_8.bundlingImage,
+          image: lambda.Runtime.PYTHON_3_13.bundlingImage,
           command: [
             'bash',
             '-c',

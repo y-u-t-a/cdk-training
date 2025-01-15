@@ -7,10 +7,10 @@ export class LambdaPythonStack extends cdk.Stack {
     super(scope, id, props)
     new lambda.Function(this, 'PythonFunction', {
       functionName: 'python-function',
-      runtime: lambda.Runtime.PYTHON_3_8,
+      runtime: lambda.Runtime.PYTHON_3_13,
       code: lambda.Code.fromAsset('lambda', {
         bundling: {
-          image: lambda.Runtime.PYTHON_3_8.bundlingImage,
+          image: lambda.Runtime.PYTHON_3_13.bundlingImage,
           command: [
             'bash',
             '-c',

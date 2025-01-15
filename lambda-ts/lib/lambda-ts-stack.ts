@@ -11,7 +11,7 @@ export class LambdaTsStack extends cdk.Stack {
       description: 'TypeScript のテスト用関数',
       entry: 'lambda/main.ts',
       handler: 'handler',
-      runtime: lambda.Runtime.NODEJS_18_X,
+      runtime: lambda.Runtime.NODEJS_22_X,
       timeout: cdk.Duration.seconds(60),
       memorySize: 256,
       environment: {

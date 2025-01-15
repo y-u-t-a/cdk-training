@@ -8,10 +8,10 @@ export class MainLambda extends Construct {
     super(scope, id)
     this.function = new lambda.Function(this, 'MainLambdaFunction', {
       functionName: 'MainFunction',
-      runtime: lambda.Runtime.PYTHON_3_8,
+      runtime: lambda.Runtime.PYTHON_3_13,
       code: lambda.Code.fromAsset('lambda/main-lambda-function', {
         bundling: {
-          image: lambda.Runtime.PYTHON_3_8.bundlingImage,
+          image: lambda.Runtime.PYTHON_3_13.bundlingImage,
           command: [
             'bash',
             '-c',

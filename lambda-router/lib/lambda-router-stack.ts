@@ -16,7 +16,7 @@ export class LambdaRouterStack extends cdk.Stack {
       description: 'Hono Lambda Function',
       entry: entry,
       handler: 'handler',
-      runtime: lambda.Runtime.NODEJS_20_X,
+      runtime: lambda.Runtime.NODEJS_22_X,
       architecture: lambda.Architecture.ARM_64,
       timeout: cdk.Duration.seconds(60),
       memorySize: 256,
