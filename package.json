@@ -17,15 +17,15 @@
   },
   "devDependencies": {
     "@aws-cdk/assert": "^2.68.0",
-    "@aws-cdk/aws-lambda-python-alpha": "2.139.0-alpha.0",
-    "@biomejs/biome": "1.7.1",
-    "@types/node": "10.17.27",
-    "aws-cdk": "2.139.0",
-    "aws-cdk-lib": "2.139.0",
-    "constructs": "^10.3.0",
-    "esbuild": "^0.19.11",
-    "source-map-support": "^0.5.16",
-    "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
+    "@aws-cdk/aws-lambda-python-alpha": "2.175.1-alpha.0",
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "22.10.6",
+    "aws-cdk": "2.175.1",
+    "aws-cdk-lib": "2.175.1",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.24.2",
+    "source-map-support": "^0.5.21",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
   }
 }
