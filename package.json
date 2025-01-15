@@ -4,7 +4,7 @@
   "workspaces": ["packages/*"],
   "scripts": {
     "format": "npx biome format --write .",
-    "lint": "npx biome lint --apply ."
+    "lint": "npx biome lint ."
   },
   "devDependencies": {
     "@aws-cdk/assert": "^2.68.0",
