@@ -1,16 +1,7 @@
 {
   "name": "cdk-training",
   "version": "0.1.0",
-  "workspaces": [
-    "dynamodb",
-    "http-api",
-    "lambda-node",
-    "lambda-python",
-    "lambda-python-module",
-    "lambda-router",
-    "lambda-ts",
-    "static-site"
-  ],
+  "workspaces": ["packages/*"],
   "scripts": {
     "format": "npx biome format --write .",
     "lint": "npx biome lint --apply ."
