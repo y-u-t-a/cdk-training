@@ -1,5 +1,7 @@
 import * as cdk from 'aws-cdk-lib'
-import { HttpApiStack } from './lib/http-api-stack'
+import { createHttpApi } from './lib/http-api'
 
 const app = new cdk.App()
-new HttpApiStack(app, 'HttpApiStack')
+const stack = new cdk.Stack(app, 'http-api-stack')
+
+createHttpApi(stack)
