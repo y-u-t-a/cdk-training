@@ -1,8 +1,8 @@
-import { Construct } from 'constructs'
-import { Stack, StackProps, RemovalPolicy } from 'aws-cdk-lib'
+import { PythonFunction } from '@aws-cdk/aws-lambda-python-alpha'
+import { RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib'
 import { Runtime } from 'aws-cdk-lib/aws-lambda'
 import { LogGroup, RetentionDays } from 'aws-cdk-lib/aws-logs'
-import { PythonFunction } from '@aws-cdk/aws-lambda-python-alpha'
+import { Construct } from 'constructs'
 
 export class LambdaPythonModuleStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {

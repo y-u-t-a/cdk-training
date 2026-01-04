@@ -1,0 +1,10 @@
+# Refer for explanation to following link:
+# https://lefthook.dev/configuration/
+
+pre-commit:
+  jobs:
+    - name: format
+      run: npm run format
+
+    - name: lint
+      run: npm run lint:fix
