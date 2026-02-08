@@ -1,6 +1,6 @@
-import { Construct } from 'constructs'
 import { aws_lambda_nodejs, aws_logs, RemovalPolicy } from 'aws-cdk-lib'
 import { Architecture, Runtime } from 'aws-cdk-lib/aws-lambda'
+import { Construct } from 'constructs'
 
 export function createLambda(
   scope: Construct,

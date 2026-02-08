@@ -1,7 +1,7 @@
-import { Construct } from 'constructs'
 import * as cdk from 'aws-cdk-lib'
 import * as lambda from 'aws-cdk-lib/aws-lambda'
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs'
+import { Construct } from 'constructs'
 
 export class LambdaRouterStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {

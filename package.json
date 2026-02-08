@@ -5,8 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "format": "npx biome format --write .",
-    "lint:fix": "npx biome lint --write .",
+    "lint:fix": "npx biome check --write .",
     "postinstall": "lefthook install"
   },
   "devDependencies": {
