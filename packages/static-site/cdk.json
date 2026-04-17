@@ -1,3 +1,3 @@
 {
-  "app": "npx tsx index.ts"
+  "app": "node index.ts"
 }

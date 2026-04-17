@@ -1,8 +1,8 @@
 import { HttpApi, HttpMethod } from 'aws-cdk-lib/aws-apigatewayv2'
 import { HttpLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations'
 import { Construct } from 'constructs'
-import { AuthLambda } from './constract/auth-lambda'
-import { MainLambda } from './constract/main-lambda'
+import { AuthLambda } from './constract/auth-lambda.ts'
+import { MainLambda } from './constract/main-lambda.ts'
 
 export function createHttpApi(scope: Construct) {
   const mainLambda = new MainLambda(scope, 'MainLambda')

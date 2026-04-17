@@ -1,5 +1,5 @@
 import { App, Stack } from 'aws-cdk-lib'
-import { createLambda } from './lib/lambda-node-stack'
+import { createLambda } from './lib/lambda-node-stack.ts'
 
 const app = new App()
 const stack = new Stack(app, 'lambda-node-stack')

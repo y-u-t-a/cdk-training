@@ -1,6 +1,7 @@
 {
   "name": "lambda-router",
   "version": "0.1.0",
+  "type": "module",
   "scripts": {
     "cdk": "cdk"
   },

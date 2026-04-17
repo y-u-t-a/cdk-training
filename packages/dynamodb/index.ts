@@ -1,5 +1,5 @@
 import { App, Stack } from 'aws-cdk-lib'
-import { createDynamoDb } from './lib/dynamodb'
+import { createDynamoDb } from './lib/dynamodb.ts'
 
 const app = new App()
 const stack = new Stack(app, 'dynamodb-stack')
