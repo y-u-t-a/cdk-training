@@ -13,7 +13,7 @@ export function createLambda(
     removalPolicy: RemovalPolicy.DESTROY,
   })
   new aws_lambda_nodejs.NodejsFunction(scope, functionName, {
-    runtime: Runtime.NODEJS_22_X,
+    runtime: Runtime.NODEJS_24_X,
     architecture: Architecture.ARM_64,
     entry: `src/${functionName}/index.mjs`,
     handler: 'handler',

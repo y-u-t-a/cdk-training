@@ -4,10 +4,10 @@ import { Construct } from 'constructs'
 export function createLambdaPython(scope: Construct) {
   new lambda.Function(scope, 'PythonFunction', {
     functionName: 'python-function',
-    runtime: lambda.Runtime.PYTHON_3_13,
+    runtime: lambda.Runtime.PYTHON_3_14,
     code: lambda.Code.fromAsset('lambda', {
       bundling: {
-        image: lambda.Runtime.PYTHON_3_13.bundlingImage,
+        image: lambda.Runtime.PYTHON_3_14.bundlingImage,
         command: [
           'bash',
           '-c',
